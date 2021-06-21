@@ -4,22 +4,20 @@ import java.util.*;
 class main {
     public static void main(String args[])
     {
-        int p, q, n, z, d = 0, e, i;
+        int primeOne, primeTwo, n, z, d = 0, e, i;
 
         Input input = new Input();
 
-        // The number to be encrypted and decrypted
         int msg = input.read("enter your message: ");
         double c;
         BigInteger msgback;
 
-        // 1st prime number p
-        p = input.read("coose your first prime: ");
 
-        // 2nd prime number q
-        q = input.read("coose your second prime: ");
-        n = p * q;
-        z = (p - 1) * (q - 1);
+        primeOne = input.read("coose your first prime: ");
+        primeTwo = input.read("coose your second prime: ");
+
+        n = primeOne * primeTwo;
+        z = (primeOne - 1) * (primeTwo - 1);
         System.out.println("the value of z = " + z);
 
         for (e = 2; e < z; e++) {
