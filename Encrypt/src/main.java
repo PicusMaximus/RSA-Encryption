@@ -1,23 +1,23 @@
 import java.math.*;
 import java.util.*;
 
-class RSA {
+class main {
     public static void main(String args[])
     {
-        int p, q, n, z, d = 0, e, i;
+        int primeOne, primeTwo, n, z, d = 0, e, i;
 
-        // The number to be encrypted and decrypted
-        int msg = 12;
+        Input input = new Input();
+
+        int msg = input.read("enter your message: ");
         double c;
         BigInteger msgback;
 
-        // 1st prime number p
-        p = 3;
 
-        // 2nd prime number q
-        q = 11;
-        n = p * q;
-        z = (p - 1) * (q - 1);
+        primeOne = input.read("coose your first prime: ");
+        primeTwo = input.read("coose your second prime: ");
+
+        n = primeOne * primeTwo;
+        z = (primeOne - 1) * (primeTwo - 1);
         System.out.println("the value of z = " + z);
 
         for (e = 2; e < z; e++) {
